@@ -15,7 +15,7 @@ def persian_number(mystr):
         '8': '۸',
         '9': '۹',
     }
-    for e, p in numbers.items():
+    for e,p in numbers.items():
         mystr = mystr.replace(e, p)
     return mystr
 
@@ -29,6 +29,5 @@ def jalali_converter(time):
     for index, month in enumerate(jmonth):
         if time_to_tuple[1] == index + 1:
             time_to_tuple[1] = month
-            break
     output = f'{time_to_tuple[2]} {time_to_tuple[1]} {time_to_tuple[0]}, {time.minute} : {time.hour}'
     return persian_number(output)

@@ -1,0 +1,22 @@
+{% extends 'registration/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title_meta %}
+    پروفایل کاربری
+{% endblock %}
+
+{% block title %}
+<div class="container">
+    پروفایل کاربری
+</div>
+{% endblock %}
+
+
+{% block main %}
+<div class="container">
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        {{form|crispy}}
+        <button class="btn btn-success">ویرایش اطلاعات</button>
+    </form>
+</div>
+{% endblock %}
